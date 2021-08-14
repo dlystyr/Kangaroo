@@ -528,7 +528,7 @@ bool Kangaroo::HandleRequest(TH_PARAM *p) {
 
       } else {
 
-        //::printf("%d DP from %s\n",nbDP,p->clientInfo.c_str());
+        ::printf("%d DP from " + workerName + "\n",head.nbDP);
 
         DP *dp = (DP *)malloc(sizeof(DP)* head.nbDP);
         GETFREE("DP",p->clientSock,dp,sizeof(DP)* head.nbDP,ntimeout,dp);

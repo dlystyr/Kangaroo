@@ -145,6 +145,7 @@ static bool gpuEnable = false;
 static vector<int> gpuId = { 0 };
 static vector<int> gridSize;
 static string workFile = "";
+static string workerName = "";
 static string checkWorkFile = "";
 static string iWorkFile = "";
 static uint32_t savePeriod = 60;
@@ -207,6 +208,10 @@ int main(int argc, char* argv[]) {
     } else if(strcmp(argv[a],"-w") == 0) {
       CHECKARG("-w",1);
       workFile = string(argv[a]);
+      a++;
+    } else if(strcmp(argv[a],"-worker") == 0) {
+      CHECKARG("-worker",1);
+      workerName = string(argv[a]);
       a++;
     } else if(strcmp(argv[a],"-i") == 0) {
       CHECKARG("-i",1);

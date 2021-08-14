@@ -284,6 +284,7 @@ private:
   int port;
   std::string lastError;
   std::string serverIp;
+  std::string workerName;
   char *hostInfo;
   int   hostInfoLength;
   int   hostAddrType;
